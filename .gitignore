@@ -2,7 +2,9 @@
 *.DS_Store
 /samples/Connect/Connect.xcodeproj/*.mode1v3
 /samples/Connect/Connect.xcodeproj/*.pbxuser
+/samples/Connect/Connect.xcodeproj/*.perspectivev3
 /samples/Connect/build/
 /src/FBConnect.xcodeproj/*.mode1v3
 /src/FBConnect.xcodeproj/*.pbxuser
+/src/FBConnect.xcodeproj/*.perspectivev3
 /src/build/
