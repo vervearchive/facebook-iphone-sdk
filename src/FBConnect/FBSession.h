@@ -167,6 +167,11 @@
  */
 - (void)send:(FBRequest*)request;
 
+/**
+ * Deletes all cookies belonging to facebook
+ */
+- (void)deleteFacebookCookies;
+
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

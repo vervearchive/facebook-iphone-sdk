@@ -262,13 +262,8 @@ static FBSession* sharedSession = nil;
       }
     }
 
-    // Remove cookies that UIWebView may have stored
-    NSHTTPCookieStorage* cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    NSArray* facebookCookies = [cookies cookiesForURL:
-      [NSURL URLWithString:@"http://login.facebook.com"]];
-    for (NSHTTPCookie* cookie in facebookCookies) {
-      [cookies deleteCookie:cookie];
-    }
+    [self deleteFacebookCookies];
+    
 
     _uid = 0;
     [_sessionKey release];
@@ -285,12 +280,22 @@ static FBSession* sharedSession = nil;
       }
     }
   } else {
+    [self deleteFacebookCookies];
     [self unsave];
   }
 }
 
 - (void)send:(FBRequest*)request {
   [self performRequest:request enqueue:YES];
+}
+
+- (void)deleteFacebookCookies {
+		NSHTTPCookieStorage* cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray* facebookCookies = [cookies cookiesForURL:
+      [NSURL URLWithString:@"http://login.facebook.com"]];
+    for (NSHTTPCookie* cookie in facebookCookies) {
+				[cookies deleteCookie:cookie];
+    }
 }
 
 @end
