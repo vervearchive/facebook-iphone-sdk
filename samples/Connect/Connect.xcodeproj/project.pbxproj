@@ -19,7 +19,6 @@
 		BE9D2B680F5E1F4B00F74C9B /* FBXMLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B5B0F5E1F4B00F74C9B /* FBXMLHandler.m */; };
 		BE9D2B690F5E1F4B00F74C9B /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B5D0F5E1F4B00F74C9B /* FBDialog.m */; };
 		BE9D2B6A0F5E1F4B00F74C9B /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B5F0F5E1F4B00F74C9B /* FBLoginDialog.m */; };
-		BE9D2B6B0F5E1F4B00F74C9B /* FBFeedDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B610F5E1F4B00F74C9B /* FBFeedDialog.m */; };
 		BE9D2B6C0F5E1F4B00F74C9B /* FBPermissionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B630F5E1F4B00F74C9B /* FBPermissionDialog.m */; };
 		BE9D2B6D0F5E1F4B00F74C9B /* FBConnect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE9D2B640F5E1F4B00F74C9B /* FBConnect.bundle */; };
 		BEC1C0910EECDC79003DE1B0 /* ConnectAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC1C08E0EECDC79003DE1B0 /* ConnectAppDelegate.m */; };
@@ -53,8 +52,6 @@
 		BE9D2B5D0F5E1F4B00F74C9B /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBDialog.m; path = ../../src/FBDialog.m; sourceTree = SOURCE_ROOT; };
 		BE9D2B5E0F5E1F4B00F74C9B /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBLoginDialog.h; path = ../../src/FBConnect/FBLoginDialog.h; sourceTree = SOURCE_ROOT; };
 		BE9D2B5F0F5E1F4B00F74C9B /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBLoginDialog.m; path = ../../src/FBLoginDialog.m; sourceTree = SOURCE_ROOT; };
-		BE9D2B600F5E1F4B00F74C9B /* FBFeedDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBFeedDialog.h; path = ../../src/FBConnect/FBFeedDialog.h; sourceTree = SOURCE_ROOT; };
-		BE9D2B610F5E1F4B00F74C9B /* FBFeedDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBFeedDialog.m; path = ../../src/FBFeedDialog.m; sourceTree = SOURCE_ROOT; };
 		BE9D2B620F5E1F4B00F74C9B /* FBPermissionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBPermissionDialog.h; path = ../../src/FBConnect/FBPermissionDialog.h; sourceTree = SOURCE_ROOT; };
 		BE9D2B630F5E1F4B00F74C9B /* FBPermissionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBPermissionDialog.m; path = ../../src/FBPermissionDialog.m; sourceTree = SOURCE_ROOT; };
 		BE9D2B640F5E1F4B00F74C9B /* FBConnect.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBConnect.bundle; path = ../../src/FBConnect.bundle; sourceTree = SOURCE_ROOT; };
@@ -153,8 +150,6 @@
 				BE9D2B5F0F5E1F4B00F74C9B /* FBLoginDialog.m */,
 				BE9D2B620F5E1F4B00F74C9B /* FBPermissionDialog.h */,
 				BE9D2B630F5E1F4B00F74C9B /* FBPermissionDialog.m */,
-				BE9D2B600F5E1F4B00F74C9B /* FBFeedDialog.h */,
-				BE9D2B610F5E1F4B00F74C9B /* FBFeedDialog.m */,
 				8497D15310695FFF0020606F /* FBStreamDialog.h */,
 				8497D15110695FF00020606F /* FBStreamDialog.m */,
 				BE9D2B640F5E1F4B00F74C9B /* FBConnect.bundle */,
@@ -226,7 +221,6 @@
 				BE9D2B680F5E1F4B00F74C9B /* FBXMLHandler.m in Sources */,
 				BE9D2B690F5E1F4B00F74C9B /* FBDialog.m in Sources */,
 				BE9D2B6A0F5E1F4B00F74C9B /* FBLoginDialog.m in Sources */,
-				BE9D2B6B0F5E1F4B00F74C9B /* FBFeedDialog.m in Sources */,
 				BE9D2B6C0F5E1F4B00F74C9B /* FBPermissionDialog.m in Sources */,
 				BE68932E0F65180D00769658 /* FBLoginButton.m in Sources */,
 				8497D15210695FF00020606F /* FBStreamDialog.m in Sources */,
