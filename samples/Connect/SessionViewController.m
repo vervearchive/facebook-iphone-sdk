@@ -139,17 +139,6 @@ static NSString* kGetSessionProxy = nil; // @"<YOUR SESSION CALLBACK)>";
 }
 
 - (void)publishFeed:(id)target {
-	// Leaving the code for FBFeedDialog here as an example, but we encourage
-	// everyone to use FBStreamDialog moving forward.
-	/*
-	FBFeedDialog* dialog = [[[FBFeedDialog alloc] init] autorelease];
-	dialog.delegate = self;
-	dialog.templateBundleId = 124879669193;
-	dialog.templateData = @"{\"images\":[{\"src\":\"http://img40.yfrog.com/img40/5914/iphoneconnectbtn.jpg\",\"href\":\"http://developers.facebook.com/connect.php?tab=iphone\"}]}";
-	dialog.userMessagePrompt = @"Example prompt";
-	[dialog show];
-    */
-	 
 	FBStreamDialog* dialog = [[[FBStreamDialog alloc] init] autorelease];
 	dialog.delegate = self;
 	dialog.userMessagePrompt = @"Example prompt";
