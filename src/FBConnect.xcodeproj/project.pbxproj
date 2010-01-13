@@ -23,11 +23,9 @@
 		BECB0ADD0F56C8930037C6F1 /* FBXMLHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BECB0ADB0F56C8930037C6F1 /* FBXMLHandler.h */; };
 		BECB0ADE0F56C8930037C6F1 /* FBXMLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB0ADC0F56C8930037C6F1 /* FBXMLHandler.m */; };
 		BECB0AE30F56C89D0037C6F1 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB0ADF0F56C89D0037C6F1 /* FBDialog.m */; };
-		BECB0AE40F56C89D0037C6F1 /* FBFeedDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB0AE00F56C89D0037C6F1 /* FBFeedDialog.m */; };
 		BECB0AE50F56C89D0037C6F1 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB0AE10F56C89D0037C6F1 /* FBLoginDialog.m */; };
 		BECB0AE60F56C89D0037C6F1 /* FBPermissionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB0AE20F56C89D0037C6F1 /* FBPermissionDialog.m */; };
 		BECB0AEB0F56C8A70037C6F1 /* FBDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = BECB0AE70F56C8A70037C6F1 /* FBDialog.h */; };
-		BECB0AEC0F56C8A70037C6F1 /* FBFeedDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = BECB0AE80F56C8A70037C6F1 /* FBFeedDialog.h */; };
 		BECB0AED0F56C8A70037C6F1 /* FBLoginDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = BECB0AE90F56C8A70037C6F1 /* FBLoginDialog.h */; };
 		BECB0AEE0F56C8A70037C6F1 /* FBPermissionDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = BECB0AEA0F56C8A70037C6F1 /* FBPermissionDialog.h */; };
 		BEF5FCAD0E04527C001C6819 /* FBConnectGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF5FCAC0E04527C001C6819 /* FBConnectGlobal.m */; };
@@ -56,11 +54,9 @@
 		BECB0ADB0F56C8930037C6F1 /* FBXMLHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXMLHandler.h; sourceTree = "<group>"; };
 		BECB0ADC0F56C8930037C6F1 /* FBXMLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXMLHandler.m; sourceTree = "<group>"; };
 		BECB0ADF0F56C89D0037C6F1 /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
-		BECB0AE00F56C89D0037C6F1 /* FBFeedDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFeedDialog.m; sourceTree = "<group>"; };
 		BECB0AE10F56C89D0037C6F1 /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
 		BECB0AE20F56C89D0037C6F1 /* FBPermissionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPermissionDialog.m; sourceTree = "<group>"; };
 		BECB0AE70F56C8A70037C6F1 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBDialog.h; path = FBConnect/FBDialog.h; sourceTree = "<group>"; };
-		BECB0AE80F56C8A70037C6F1 /* FBFeedDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBFeedDialog.h; path = FBConnect/FBFeedDialog.h; sourceTree = "<group>"; };
 		BECB0AE90F56C8A70037C6F1 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBLoginDialog.h; path = FBConnect/FBLoginDialog.h; sourceTree = "<group>"; };
 		BECB0AEA0F56C8A70037C6F1 /* FBPermissionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBPermissionDialog.h; path = FBConnect/FBPermissionDialog.h; sourceTree = "<group>"; };
 		BEF5FCAC0E04527C001C6819 /* FBConnectGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBConnectGlobal.m; sourceTree = "<group>"; };
@@ -141,8 +137,6 @@
 				BECB0AEA0F56C8A70037C6F1 /* FBPermissionDialog.h */,
 				BECB0AE20F56C89D0037C6F1 /* FBPermissionDialog.m */,
 				84C762B71084A08800FB5EE0 /* FBStreamDialog.h */,
-				BECB0AE80F56C8A70037C6F1 /* FBFeedDialog.h */,
-				BECB0AE00F56C89D0037C6F1 /* FBFeedDialog.m */,
 				84C762B51084A07A00FB5EE0 /* FBStreamDialog.m */,
 				BE9D2AB10F5E16ED00F74C9B /* FBConnect.bundle */,
 			);
@@ -162,7 +156,6 @@
 				BEF7094D0EA02F1700EFA6FD /* FBSession.h in Headers */,
 				BECB0ADD0F56C8930037C6F1 /* FBXMLHandler.h in Headers */,
 				BECB0AEB0F56C8A70037C6F1 /* FBDialog.h in Headers */,
-				BECB0AEC0F56C8A70037C6F1 /* FBFeedDialog.h in Headers */,
 				BECB0AED0F56C8A70037C6F1 /* FBLoginDialog.h in Headers */,
 				BECB0AEE0F56C8A70037C6F1 /* FBPermissionDialog.h in Headers */,
 				BE621DE90F6888820004CBDF /* FBLoginButton.h in Headers */,
@@ -217,7 +210,6 @@
 				BEF5FCAD0E04527C001C6819 /* FBConnectGlobal.m in Sources */,
 				BECB0ADE0F56C8930037C6F1 /* FBXMLHandler.m in Sources */,
 				BECB0AE30F56C89D0037C6F1 /* FBDialog.m in Sources */,
-				BECB0AE40F56C89D0037C6F1 /* FBFeedDialog.m in Sources */,
 				BECB0AE50F56C89D0037C6F1 /* FBLoginDialog.m in Sources */,
 				BECB0AE60F56C89D0037C6F1 /* FBPermissionDialog.m in Sources */,
 				BE621DE70F68887D0004CBDF /* FBLoginButton.m in Sources */,
