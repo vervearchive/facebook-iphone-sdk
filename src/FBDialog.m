@@ -322,7 +322,8 @@ static CGFloat kBorderWidth = 10;
 	if ([_closeButton respondsToSelector:@selector(titleLabel)]) {
 		_closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:12];
 	} else { // This triggers a deprecation warning but at least it will work on OS 2.x
-		_closeButton.font = [UIFont boldSystemFontOfSize:12];
+    [_closeButton setValue:[UIFont boldSystemFontOfSize:12] forKey:@"font"];
+		//_closeButton.font = [UIFont boldSystemFontOfSize:12];
 	}
 	_closeButton.showsTouchWhenHighlighted = YES;
     _closeButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin
