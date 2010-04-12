@@ -215,3 +215,4 @@ typedef unsigned long long FBID;
 
 NSMutableArray* FBCreateNonRetainingArray();
 
+BOOL FBIsDeviceIPad();
