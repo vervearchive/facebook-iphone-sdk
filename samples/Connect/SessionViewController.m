@@ -1,5 +1,5 @@
 /*
- * Copyright 2009 Facebook
+ * Copyright 2009-2010 Facebook
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // This application will not work until you enter your Facebook application's API key here:
 
-static NSString* kApiKey = @"<YOUR API KEY>";
+static NSString* kApiKey = @"";
 
 // Enter either your API secret or a callback URL (as described in documentation):
 static NSString* kApiSecret = nil; // @"<YOUR SECRET KEY>";
@@ -87,6 +87,8 @@ static NSString* kGetSessionProxy = nil; // @"<YOUR SESSION CALLBACK)>";
 
   NSDictionary* params = [NSDictionary dictionaryWithObject:fql forKey:@"query"];
   [[FBRequest requestWithDelegate:self] call:@"facebook.fql.query" params:params];
+  
+  [self translationExamples];
 }
 
 - (void)sessionDidNotLogin:(FBSession*)session {
@@ -139,22 +141,22 @@ static NSString* kGetSessionProxy = nil; // @"<YOUR SESSION CALLBACK)>";
 }
 
 - (void)publishFeed:(id)target {
-	FBStreamDialog* dialog = [[[FBStreamDialog alloc] init] autorelease];
-	dialog.delegate = self;
-	dialog.userMessagePrompt = @"Example prompt";
-	dialog.attachment = @"{\"name\":\"Facebook Connect for iPhone\",\"href\":\"http://developers.facebook.com/connect.php?tab=iphone\",\"caption\":\"Caption\",\"description\":\"Description\",\"media\":[{\"type\":\"image\",\"src\":\"http://img40.yfrog.com/img40/5914/iphoneconnectbtn.jpg\",\"href\":\"http://developers.facebook.com/connect.php?tab=iphone/\"}],\"properties\":{\"another link\":{\"text\":\"Facebook home page\",\"href\":\"http://www.facebook.com\"}}}";
-	// replace this with a friend's UID
-	// dialog.targetId = @"999999";
-	[dialog show];
+  FBStreamDialog* dialog = [[[FBStreamDialog alloc] init] autorelease];
+  dialog.delegate = self;
+  dialog.userMessagePrompt = @"Example prompt";
+  dialog.attachment = @"{\"name\":\"Facebook Connect for iPhone\",\"href\":\"http://developers.facebook.com/connect.php?tab=iphone\",\"caption\":\"Caption\",\"description\":\"Description\",\"media\":[{\"type\":\"image\",\"src\":\"http://img40.yfrog.com/img40/5914/iphoneconnectbtn.jpg\",\"href\":\"http://developers.facebook.com/connect.php?tab=iphone/\"}],\"properties\":{\"another link\":{\"text\":\"Facebook home page\",\"href\":\"http://www.facebook.com\"}}}";
+  // replace this with a friend's UID
+  // dialog.targetId = @"999999";
+  [dialog show];
 }
 
 - (void)setStatus:(id)target {
   NSString *statusString = @"Testing iPhone Connect SDK";
-	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-							statusString, @"status",
-							@"true", @"status_includes_verb",
-							nil];
-	[[FBRequest requestWithDelegate:self] call:@"facebook.users.setStatus" params:params];
+  NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+              statusString, @"status",
+              @"true", @"status_includes_verb",
+              nil];
+  [[FBRequest requestWithDelegate:self] call:@"facebook.users.setStatus" params:params];
 }
 
 - (void)uploadPhoto:(id)target {
@@ -166,5 +168,82 @@ static NSString* kGetSessionProxy = nil; // @"<YOUR SESSION CALLBACK)>";
   NSDictionary *params = nil;
   [[FBRequest requestWithDelegate:self] call:@"facebook.photos.upload" params:params dataParam:(NSData*)img];
 }
+
+// FB Translation Framework examples
+
+- (void)uploadSomeStrings {
+  NSError *error = nil;
+  int result;
+
+  NSString *newString =
+    [NSString stringWithFormat:@"String to translate from iPhone SDK, %d.",
+     rand() % 10000];
+  NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:10];
+  [dict setObject:@"comment" forKey:newString];
+
+  result = [FBNativeStringUploader uploadStringSet:dict error:&error];
+}
+
+/*
+ * A list of supported locales can be found at:
+ * http://www.facebook.com/translations/AppleToFbLocales.plist
+ * Or for a programmatic check, see [FBTranslationsLoader supportsLocale:].
+ */
+- (void)getSomeTranslations {
+  NSString *failure = @"Supported locale assertion failed";
+  NSAssert2([FBTranslationsLoader supportsLocale:@"es_ES"] == 1,
+            failure,
+            1,
+            [FBTranslationsLoader supportsLocale:@"es_ES"]);
+  
+  NSAssert2([FBTranslationsLoader supportsLocale:@"xx_YY"] == 0,
+            failure,
+            0,
+            [FBTranslationsLoader supportsLocale:@"xx_YY"]);
+  
+  
+  [FBTranslationsLoader loadTranslationsForLocale:@"es_ES" delegate:self];
+}
+
+- (void)translationExamples {
+  [self uploadSomeStrings];
+  
+  [self getSomeTranslations];
+}
+
+- (void)assertExpectedTranslation:(NSString *)nativeString
+                      description:(NSString *)description
+              expectedTranslation:(NSString *)expectedTranslation {
+  NSString *translationMismatch =
+  @"Translations mismatch. Expected <%@>, got <%@>.";
+
+  NSAssert2(
+            [FBLocalizedString(nativeString, description) 
+             isEqualToString:expectedTranslation],
+            translationMismatch,
+            expectedTranslation,
+            FBLocalizedString(nativeString, description)
+            );  
+}
+
+- (void)translationsDidLoad {
+  NSString *dummy = FBLocalizedString(@"Test String 6", @"Sample description");
+  NSString *dummy2 =
+    FBLocalizedString(@"Test String 5", @"Test of \"quotes.\", \n, \t.");
+  
+  [self assertExpectedTranslation:@"Test String 6"
+                      description:@"Sample description"
+              expectedTranslation:@"Sample translation"];
+  
+  [self assertExpectedTranslation:@"Test String 5"
+                      description:@"Test of \"quotes.\", \n, \t."
+              expectedTranslation:@"Test of \"quotes.\", \n, \t."];
+
+}
+
+- (void)translationsDidFailWithError:(NSError *)error {
+  NSAssert(false, @"Loading translations errored.");
+}
+
 
 @end

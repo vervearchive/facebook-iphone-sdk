@@ -12,6 +12,9 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		8497D15210695FF00020606F /* FBStreamDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497D15110695FF00020606F /* FBStreamDialog.m */; };
+		952491FE11518E62007C290B /* FBNativeStringUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 952491FB11518E62007C290B /* FBNativeStringUploader.m */; };
+		952491FF11518E62007C290B /* FBTranslationsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 952491FC11518E62007C290B /* FBTranslationsLoader.m */; };
+		9524920011518E62007C290B /* FBUploadResultReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 952491FD11518E62007C290B /* FBUploadResultReceiver.m */; };
 		BE68932E0F65180D00769658 /* FBLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE68932D0F65180D00769658 /* FBLoginButton.m */; };
 		BE9D2B650F5E1F4B00F74C9B /* FBConnectGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B550F5E1F4B00F74C9B /* FBConnectGlobal.m */; };
 		BE9D2B660F5E1F4B00F74C9B /* FBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D2B570F5E1F4B00F74C9B /* FBSession.m */; };
@@ -37,6 +40,12 @@
 		8497D15110695FF00020606F /* FBStreamDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBStreamDialog.m; path = ../../src/FBStreamDialog.m; sourceTree = SOURCE_ROOT; };
 		8497D15310695FFF0020606F /* FBStreamDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBStreamDialog.h; path = ../../src/FBConnect/FBStreamDialog.h; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952491FB11518E62007C290B /* FBNativeStringUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBNativeStringUploader.m; path = ../../src/FBNativeStringUploader.m; sourceTree = SOURCE_ROOT; };
+		952491FC11518E62007C290B /* FBTranslationsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBTranslationsLoader.m; path = ../../src/FBTranslationsLoader.m; sourceTree = SOURCE_ROOT; };
+		952491FD11518E62007C290B /* FBUploadResultReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBUploadResultReceiver.m; path = ../../src/FBUploadResultReceiver.m; sourceTree = SOURCE_ROOT; };
+		9524920111518E76007C290B /* FBNativeStringUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNativeStringUploader.h; path = ../../src/FBConnect/FBNativeStringUploader.h; sourceTree = SOURCE_ROOT; };
+		9524920211518E76007C290B /* FBTranslationsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBTranslationsLoader.h; path = ../../src/FBConnect/FBTranslationsLoader.h; sourceTree = SOURCE_ROOT; };
+		9524920311518E76007C290B /* FBUploadResultReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBUploadResultReceiver.h; path = ../../src/FBConnect/FBUploadResultReceiver.h; sourceTree = SOURCE_ROOT; };
 		BE68932C0F65180000769658 /* FBLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBLoginButton.h; path = ../../src/FBConnect/FBLoginButton.h; sourceTree = SOURCE_ROOT; };
 		BE68932D0F65180D00769658 /* FBLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBLoginButton.m; path = ../../src/FBLoginButton.m; sourceTree = SOURCE_ROOT; };
 		BE9D2B530F5E1F4B00F74C9B /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBConnect.h; path = ../../src/FBConnect/FBConnect.h; sourceTree = SOURCE_ROOT; };
@@ -133,6 +142,12 @@
 		BE9D2B520F5E1F4B00F74C9B /* FBConnect */ = {
 			isa = PBXGroup;
 			children = (
+				9524920111518E76007C290B /* FBNativeStringUploader.h */,
+				9524920211518E76007C290B /* FBTranslationsLoader.h */,
+				9524920311518E76007C290B /* FBUploadResultReceiver.h */,
+				952491FB11518E62007C290B /* FBNativeStringUploader.m */,
+				952491FC11518E62007C290B /* FBTranslationsLoader.m */,
+				952491FD11518E62007C290B /* FBUploadResultReceiver.m */,
 				BE9D2B530F5E1F4B00F74C9B /* FBConnect.h */,
 				BE9D2B540F5E1F4B00F74C9B /* FBConnectGlobal.h */,
 				BE9D2B550F5E1F4B00F74C9B /* FBConnectGlobal.m */,
@@ -224,6 +239,9 @@
 				BE9D2B6C0F5E1F4B00F74C9B /* FBPermissionDialog.m in Sources */,
 				BE68932E0F65180D00769658 /* FBLoginButton.m in Sources */,
 				8497D15210695FF00020606F /* FBStreamDialog.m in Sources */,
+				952491FE11518E62007C290B /* FBNativeStringUploader.m in Sources */,
+				952491FF11518E62007C290B /* FBTranslationsLoader.m in Sources */,
+				9524920011518E62007C290B /* FBUploadResultReceiver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

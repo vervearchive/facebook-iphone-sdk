@@ -1,5 +1,5 @@
 /*
- * Copyright 2009 Facebook
+ * Copyright 2009-2010 Facebook
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,10 @@
 @class FBSession;
 
 @interface SessionViewController : UIViewController
-    <FBDialogDelegate, FBSessionDelegate, FBRequestDelegate> {
+    <FBDialogDelegate,
+     FBSessionDelegate,
+     FBRequestDelegate,
+     FBTranslationsLoaderDelegate> {
   IBOutlet UILabel* _label;
   IBOutlet UIButton* _permissionButton;
   IBOutlet UIButton* _feedButton;
@@ -35,5 +38,8 @@
 - (void)publishFeed:(id)target;
 - (void)setStatus:(id)target;
 - (void)uploadPhoto:(id)target;
+- (void)translationExamples;
+- (void)translationsDidLoad;
+- (void)translationsDidFailWithError:(NSError *)error;
 
 @end
