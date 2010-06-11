@@ -170,7 +170,7 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
     [self utfAppendBody:body data:endLine];
   }
   
-  FBLOG2(@"Sending %s", [body bytes]);
+  //FBLOG2(@"Sending %s", [body bytes]);
   return body;
 }
 
@@ -208,7 +208,7 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
 }
 
 - (void)handleResponseData:(NSData*)data {
-  FBLOG2(@"DATA: %s", data.bytes);
+  //FBLOG2(@"DATA: %s", data.bytes);
   NSError* error = nil;
   id result = [self parseXMLResponse:data error:&error];
   if (error) {
@@ -219,7 +219,7 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
 }
 
 - (void)connect {
-  FBLOG(@"Connecting to %@ %@", _url, _params);
+  //FBLOG(@"Connecting to %@ %@", _url, _params);
 
   if ([_delegate respondsToSelector:@selector(requestLoading:)]) {
     [_delegate requestLoading:self];

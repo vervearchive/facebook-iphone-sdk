@@ -7,4 +7,7 @@
 /src/FBConnect.xcodeproj/*.mode1v3
 /src/FBConnect.xcodeproj/*.pbxuser
 /src/FBConnect.xcodeproj/*.perspectivev3
+/src/FBConnect.xcodeproj/project.xcworkspace
+/src/FBConnect.xcodeproj/xcuserdata
+
 /src/build/
