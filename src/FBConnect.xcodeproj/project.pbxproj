@@ -272,7 +272,7 @@
 					"\"$(FBTOUCHROOT)/external\"",
 					.,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib\"",
 					"\"$(FBTOUCHROOT)\"",
@@ -301,7 +301,7 @@
 					"\"$(FBTOUCHROOT)/external\"",
 					.,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib\"",
 					"\"$(FBTOUCHROOT)\"",
